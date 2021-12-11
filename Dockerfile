@@ -29,9 +29,9 @@ RUN pecl install smbclient && \
 # install imagemagick
 RUN apk add $PHPIZE_DEPS imagemagick imagemagick-dev
 
-RUN apk add $PHPIZE_DEPS autoconf libtool pcre-dev && \
+RUN apk add $PHPIZE_DEPS libtool pcre-dev && \
     pecl install imagick && \
     docker-php-ext-enable imagick
 
 # cleanup
-RUN apk del $PHPIZE_DEPS autoconf libtool pcre-dev
+RUN apk del $PHPIZE_DEPS libtool pcre-dev
