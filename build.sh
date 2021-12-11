@@ -4,7 +4,7 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-IMAGE_NAME="ecw74/nextdloud-facerecognition"
+IMAGE_NAME="ecw74/nextcloud-facerecognition"
 VCS_REF=$(git rev-parse --short HEAD)
 
 
